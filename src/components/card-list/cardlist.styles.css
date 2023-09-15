@@ -1,0 +1,31 @@
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.card-list > div {
+    width: 20%;
+}
+.card-container {
+    margin: 10px;
+    padding: 20px;
+    background: #1A120B;
+    border-radius: 20px;
+}
+.card-container p,.card-container h2 {
+    color: #E5E5CB;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .card-list > div {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-list > div {
+        width: 100%;
+    }
+}
