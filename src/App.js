@@ -5,13 +5,15 @@ function App() {
 
   const [searchField, setSearchField] = useState('');
   const [monsters, setMonsters] = useState([]);
+  const [filterMonsters,setFileterMonsters]= useState(monsters);
+  const [stringField, setStringField]= useState('');
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString)
     // console.log(searchField)
   }
-  //Calling inly ont time on mount
+  //Calling only one time on mount
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
@@ -20,9 +22,13 @@ function App() {
     );
   }, [])
 
-  const filterMonsters = monsters.filter((monster) => {
-    return monster.name.toLocaleLowerCase().includes(searchField);
-  });
+  useEffect(()=>{
+    const newFilterMonsters = monsters.filter((monster) => {
+        return monster.name.toLocaleLowerCase().includes(searchField);
+      });
+      setFileterMonsters(newFilterMonsters)
+  },[monsters,searchField])
+  
   return (
     <div className="App">
       <h1 className="app-title"> Monster Card</h1>
