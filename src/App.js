@@ -6,7 +6,6 @@ function App() {
   const [searchField, setSearchField] = useState('');
   const [monsters, setMonsters] = useState([]);
   const [filterMonsters,setFileterMonsters]= useState(monsters);
-  const [stringField, setStringField]= useState('');
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
