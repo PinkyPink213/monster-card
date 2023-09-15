@@ -1,8 +1,7 @@
 import React from 'react';
 import Card from 'components/card/card.component';
 import './cardlist.styles.css';
-export default function CardList(props) {
-    const { monsters } = props;
+export default function CardList({monsters}) {
     return (
         <div className='card-list'>
             {monsters.map((monster) => {
