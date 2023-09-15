@@ -17,7 +17,11 @@
     color: #E5E5CB;
 }
 
-
+@media only screen and (max-width: 991px) {
+    .card-list > div {
+        width: 25%;
+    }
+}
 @media only screen and (max-width: 768px) {
     .card-list > div {
         width: 40%;
