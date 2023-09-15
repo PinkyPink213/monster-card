@@ -32,9 +32,14 @@
 
 
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1199px) {
     .card-list>div {
         width: 25%;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .card-list>div {
+        width: 30%;
     }
 }
 
