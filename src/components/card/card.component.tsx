@@ -1,6 +1,9 @@
 import React from 'react';
-
-export default function Card({monster}) {
+import { Monster} from '../../App'
+type CardProps = {
+    monster: Monster;
+}
+export default function Card({monster}:CardProps) {
     const { name, email,website, id } = monster;
     return (
         <div className='card-container' key={id}>
